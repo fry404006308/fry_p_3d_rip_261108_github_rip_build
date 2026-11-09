@@ -1,0 +1,6 @@
+
+$ bash run_on_target.sh
+· 清除本目录的下载隔离属性（com.apple.quarantine；只动 /Users/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_darwin-x64/fry-halftone-verify-kit 里的文件）
+
+run_on_target.sh: line 84: tgt�: unbound variable
+[rc=1, 0.7 s]

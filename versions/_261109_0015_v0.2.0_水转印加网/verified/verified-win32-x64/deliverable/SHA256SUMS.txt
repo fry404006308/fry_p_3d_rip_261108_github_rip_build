@@ -1,0 +1,1 @@
+e4f14edc5c72aed8ba580211a33a3c042bef547785b926347e692533fc9f51fa  fry-halftone-0.2.0-win32-x64.zip

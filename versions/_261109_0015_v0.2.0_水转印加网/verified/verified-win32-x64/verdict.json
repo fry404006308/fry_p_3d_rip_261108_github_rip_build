@@ -1,0 +1,64 @@
+{
+ "schema_str": "fry-gh-verdict/1",
+ "product_str": "halftone",
+ "version_str": "0.2.0",
+ "version_dir_str": "_261109_0015_v0.2.0_水转印加网",
+ "target_str": "win32-x64",
+ "host_target_str": "win32-x64",
+ "machine_dict": {
+  "platform_str": "Windows-10-10.0.20348-SP0",
+  "machine_str": "AMD64",
+  "python_str": "3.11.9",
+  "runner_str": "GitHub Actions 1000000014",
+  "image_str": "win22 20261101.353.1"
+ },
+ "started_at_str": "2026-11-09T08:21:40+0000",
+ "algorithm_fingerprint_str": "aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 win32-x64 ｜ 要验 win32-x64"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "2 个输入与 manifest 一致"
+  },
+  {
+   "key_str": "指纹闸",
+   "ok_bool": true,
+   "detail_str": "库自报 aea1b4527f22296a ｜ 登记 aea1b4527f22296a"
+  },
+  {
+   "key_str": "包自检 verify_delivery.py",
+   "ok_bool": true,
+   "detail_str": "rc=0"
+  },
+  {
+   "key_str": "C 接口用例 test_c_abi",
+   "ok_bool": true,
+   "detail_str": "rc=0"
+  },
+  {
+   "key_str": "golden 逐字节 test_golden",
+   "ok_bool": true,
+   "detail_str": "rc=0"
+  },
+  {
+   "key_str": "命令行契约 test_cli_contract",
+   "ok_bool": true,
+   "detail_str": "rc=0"
+  },
+  {
+   "key_str": "golden 件数",
+   "ok_bool": true,
+   "detail_str": "登记 23 件 ｜ 日志里 23/23、23/23"
+  }
+ ],
+ "ok_bool": true,
+ "seconds_float": 84.0,
+ "deliverable_dict": {
+  "fry-halftone-0.2.0-win32-x64.zip": "e4f14edc5c72aed8ba580211a33a3c042bef547785b926347e692533fc9f51fa"
+ }
+}

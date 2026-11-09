@@ -1,0 +1,1 @@
+34cb5bc369f1857afa28b1c10090e47af6b7948d5f3deef084bc6101a6f279b1  fry-halftone-0.2.0-linux-arm64.tar.zst

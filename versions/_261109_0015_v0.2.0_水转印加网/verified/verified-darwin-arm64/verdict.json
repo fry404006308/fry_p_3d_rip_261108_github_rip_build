@@ -1,0 +1,48 @@
+{
+ "schema_str": "fry-gh-verdict/1",
+ "product_str": "halftone",
+ "version_str": "0.2.0",
+ "version_dir_str": "_261109_0015_v0.2.0_水转印加网",
+ "target_str": "darwin-arm64",
+ "host_target_str": "darwin-arm64",
+ "machine_dict": {
+  "platform_str": "macOS-15.8.2-arm64-arm-64bit",
+  "machine_str": "arm64",
+  "python_str": "3.11.9",
+  "runner_str": "GitHub Actions 1000000011",
+  "image_str": "macos15 20261104.0514.1",
+  "macos_str": "15.8.2"
+ },
+ "started_at_str": "2026-11-09T08:21:38+0000",
+ "algorithm_fingerprint_str": "aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 darwin-arm64 ｜ 要验 darwin-arm64"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "2 个输入与 manifest 一致"
+  },
+  {
+   "key_str": "run_on_target.sh",
+   "ok_bool": false,
+   "detail_str": "rc=1（冒烟九道闸 + golden 23 件逐字节 + 命令行契约 44 项）"
+  },
+  {
+   "key_str": "golden 件数",
+   "ok_bool": false,
+   "detail_str": "登记 23 件 ｜ 日志里 没找到计数行"
+  },
+  {
+   "key_str": "交付件",
+   "ok_bool": false,
+   "detail_str": "没有生成 fry-halftone-0.2.0-darwin-arm64.tar.zst"
+  }
+ ],
+ "ok_bool": false,
+ "seconds_float": 0.3,
+ "deliverable_dict": {}
+}
