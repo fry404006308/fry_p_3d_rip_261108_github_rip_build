@@ -1,0 +1,17 @@
+{
+ "schema_str": "fry-gh-history/1",
+ "product_str": "halftone",
+ "versions_list": [
+  {
+   "dir_str": "_261109_0015_v0.2.0_水转印加网",
+   "version_str": "0.2.0",
+   "algorithm_fingerprint_str": "aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08",
+   "inputs_sha256_dict": {
+    "kit": "2424f2d3aafcc57e8bc79e8fd2c9c338a67c3b03e20283b7ff4d208bc907f298",
+    "win32-x64": "e4f14edc5c72aed8ba580211a33a3c042bef547785b926347e692533fc9f51fa"
+   },
+   "status_str": "staged",
+   "staged_at_str": "2026-11-09T00:15:46-0800"
+  }
+ ]
+}

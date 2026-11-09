@@ -1,0 +1,31 @@
+{
+ "schema_str": "fry-gh-version/1",
+ "product_str": "halftone",
+ "title_str": "水转印加网 SDK（HE500/510/520 统一 dll）",
+ "version_str": "0.2.0",
+ "dir_str": "_261109_0015_v0.2.0_水转印加网",
+ "keyword_str": "水转印加网",
+ "created_at_str": "2026-11-09T00:15:46-0800",
+ "algorithm_fingerprint_str": "aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08",
+ "algo_commit_str": "b123dade1600606df9475b8685b8c1a680c2aad3",
+ "source_repo_commit_str": "b6bd32fe4f3fc619e16529d7b61b3b6e77b47016",
+ "inputs_dict": {
+  "kit": {
+   "file_str": "inputs/fry-halftone-0.2.0-verify-kit.tar.gz",
+   "sha256_str": "2424f2d3aafcc57e8bc79e8fd2c9c338a67c3b03e20283b7ff4d208bc907f298",
+   "size_int": 5991862
+  },
+  "win32-x64": {
+   "file_str": "inputs/fry-halftone-0.2.0-win32-x64.zip",
+   "sha256_str": "e4f14edc5c72aed8ba580211a33a3c042bef547785b926347e692533fc9f51fa",
+   "size_int": 905086
+  }
+ },
+ "targets_list": [
+  "win32-x64",
+  "darwin-arm64",
+  "darwin-x64",
+  "linux-arm64",
+  "linux-x64"
+ ]
+}
