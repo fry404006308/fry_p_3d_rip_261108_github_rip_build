@@ -21,6 +21,17 @@
     "linux-arm64": true,
     "linux-x64": true
    }
+  },
+  {
+   "dir_str": "_261109_0032_v0.2.0_水转印加网_mac修复",
+   "version_str": "0.2.0",
+   "algorithm_fingerprint_str": "aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08",
+   "inputs_sha256_dict": {
+    "kit": "dd13bbd5f2a0d3ae513b621de4174c51d85cb0ed94abcedbe4950022dba8ef14",
+    "win32-x64": "e4f14edc5c72aed8ba580211a33a3c042bef547785b926347e692533fc9f51fa"
+   },
+   "status_str": "staged",
+   "staged_at_str": "2026-11-09T00:32:46-0800"
   }
  ]
 }
