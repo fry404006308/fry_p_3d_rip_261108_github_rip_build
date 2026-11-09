@@ -467,6 +467,12 @@ def main(argv=None) -> int:
     result: Dict[str, Any] = {"cmd_str": ns.cmd}
     if ns.cmd == "status":
         cmd_status(ns)
+        if ns.result_json:
+            h = load_history()
+            Path(ns.result_json).write_text(json.dumps({
+                "ok_bool": True, "cmd_str": "status", "message_str": "%s：%d 个版本目录" % (PRODUCT["title_str"], len(h["versions_list"])),
+                "output_path_str": str(VERSIONS), "key_output_dict": {"history_list": h["versions_list"]}},
+                ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         return 0
     if ns.cmd in ("all", "stage"):
         vname = cmd_stage(ns)
