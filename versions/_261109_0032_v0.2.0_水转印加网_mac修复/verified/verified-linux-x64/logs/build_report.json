@@ -1,0 +1,36 @@
+{
+ "version_str": "0.2.0",
+ "platform_str": "linux-x64",
+ "fingerprint_str": "aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08",
+ "wrapper_sha256_str": "13b56a4b8092c3d00743e4ad9642b90afe94265392e995745adb793e36002c42",
+ "build_origin_str": "prebuilt：zig 0.16.0 交叉编译（Windows 宿主）-target x86_64-linux-gnu.2.28",
+ "min_os_str": "glibc ≥ 2.17（实测：库引用的最高符号版本 GLIBC_2.17）x86-64",
+ "host_str": "Linux x86_64（Linux-6.8.0-1070-azure-x86_64-with-glibc2.35）",
+ "total_s_float": 34.4,
+ "step_s_dict": {
+  "①载荷闸": 0.0,
+  "②编译": 0.0,
+  "③装配": 0.02,
+  "④冒烟": 34.35,
+  "⑤打包": 0.02
+ },
+ "smoke_bool": true,
+ "smoke_dict": {
+  "export_surface_str": "ok_11",
+  "fingerprint_str": "ok",
+  "package_info_str": "ok_27",
+  "demo_slices_int": 109,
+  "cli_contract_str": "ok",
+  "delivery_items_int": 17,
+  "delivery_versions_dict": {
+   "VERSION 文件": "0.2.0",
+   "sdk_info.json": "0.2.0",
+   "dll 自报 GetVersion()": "0.2.0",
+   "包名": "fry-halftone-0.2.0-linux-x64"
+  }
+ },
+ "sdk_mb_float": 1.9,
+ "sdk_file_count_int": 17,
+ "archive_str": "/home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-x64/fry-halftone-verify-kit/out/fry-halftone-0.2.0-linux-x64.tar.zst",
+ "archive_mb_float": 0.8
+}

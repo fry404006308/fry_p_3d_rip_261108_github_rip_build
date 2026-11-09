@@ -1,0 +1,1 @@
+cd7de56c7470454418154dddae85eb5bb7da1de2d8f611d97bd2f8fc1158291b  fry-halftone-0.2.0-darwin-arm64.tar.zst

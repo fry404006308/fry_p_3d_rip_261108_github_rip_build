@@ -1,0 +1,55 @@
+{
+ "schema_str": "fry-gh-verdict/1",
+ "product_str": "halftone",
+ "version_str": "0.2.0",
+ "version_dir_str": "_261109_0032_v0.2.0_水转印加网_mac修复",
+ "target_str": "darwin-x64",
+ "host_target_str": "darwin-x64",
+ "machine_dict": {
+  "platform_str": "macOS-15.7.9-x86_64-i386-64bit",
+  "machine_str": "x86_64",
+  "python_str": "3.11.9",
+  "runner_str": "GitHub Actions 1000000026",
+  "image_str": "macos15 20260824.0482.1",
+  "macos_str": "15.7.9"
+ },
+ "started_at_str": "2026-11-09T08:33:25+0000",
+ "algorithm_fingerprint_str": "aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 darwin-x64 ｜ 要验 darwin-x64"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "2 个输入与 manifest 一致"
+  },
+  {
+   "key_str": "run_on_target.sh",
+   "ok_bool": true,
+   "detail_str": "rc=0（冒烟九道闸 + golden 23 件逐字节 + 命令行契约 44 项）"
+  },
+  {
+   "key_str": "golden 件数",
+   "ok_bool": true,
+   "detail_str": "登记 23 件 ｜ 日志里 23/23、23/23"
+  },
+  {
+   "key_str": "build_report",
+   "ok_bool": true,
+   "detail_str": "平台 darwin-x64 ｜ 版本 0.2.0"
+  },
+  {
+   "key_str": "交付件",
+   "ok_bool": true,
+   "detail_str": "fry-halftone-0.2.0-darwin-x64.tar.zst"
+  }
+ ],
+ "ok_bool": true,
+ "seconds_float": 78.1,
+ "deliverable_dict": {
+  "fry-halftone-0.2.0-darwin-x64.tar.zst": "4f6ca2354ba3610943c996ebc45a8408309dca806ca9490b39275a4aea9b4dd2"
+ }
+}

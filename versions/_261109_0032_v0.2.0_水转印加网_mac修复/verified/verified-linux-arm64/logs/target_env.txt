@@ -1,0 +1,6 @@
+date: 2026-11-09 08:33:17 +0000
+uname: Linux runnervmkb2gk 7.0.0-1017-azure #17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 19:06:39 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+VERSION_ID="24.04"
+ldd (Ubuntu GLIBC 2.39-0ubuntu8.9) 2.39
+python: 3.11.18 aarch64

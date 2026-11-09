@@ -1,0 +1,125 @@
+{
+ "ok_bool": true,
+ "problems_list": [],
+ "rows_list": [
+  {
+   "target_str": "win32-x64",
+   "ok_bool": true,
+   "checks_int": 8,
+   "machine_str": "Windows-10-10.0.20348-SP0",
+   "deliverable_dict": {
+    "fry-halftone-0.2.0-win32-x64.zip": "e4f14edc5c72aed8ba580211a33a3c042bef547785b926347e692533fc9f51fa"
+   }
+  },
+  {
+   "target_str": "darwin-arm64",
+   "ok_bool": true,
+   "checks_int": 6,
+   "machine_str": "macOS-15.8.2-arm64-arm-64bit",
+   "deliverable_dict": {
+    "fry-halftone-0.2.0-darwin-arm64.tar.zst": "cd7de56c7470454418154dddae85eb5bb7da1de2d8f611d97bd2f8fc1158291b"
+   }
+  },
+  {
+   "target_str": "darwin-x64",
+   "ok_bool": true,
+   "checks_int": 6,
+   "machine_str": "macOS-15.7.9-x86_64-i386-64bit",
+   "deliverable_dict": {
+    "fry-halftone-0.2.0-darwin-x64.tar.zst": "4f6ca2354ba3610943c996ebc45a8408309dca806ca9490b39275a4aea9b4dd2"
+   }
+  },
+  {
+   "target_str": "linux-arm64",
+   "ok_bool": true,
+   "checks_int": 6,
+   "machine_str": "Linux-7.0.0-1017-azure-aarch64-with-glibc2.39",
+   "deliverable_dict": {
+    "fry-halftone-0.2.0-linux-arm64.tar.zst": "a99eebccdacc988e73dec43979fdaa74b2a6f6ae4a2cfaeb5467c79e8b5fcefb"
+   }
+  },
+  {
+   "target_str": "linux-x64",
+   "ok_bool": true,
+   "checks_int": 6,
+   "machine_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+   "deliverable_dict": {
+    "fry-halftone-0.2.0-linux-x64.tar.zst": "5345a4f97fa42a97ddbb38e1623db6f54d02f3f099c69f07ed4a9ce0e36e78ae"
+   }
+  }
+ ],
+ "summary_dict": {
+  "schema_str": "fry-gh-summary/1",
+  "version_str": "0.2.0",
+  "version_dir_str": "_261109_0032_v0.2.0_水转印加网_mac修复",
+  "algorithm_fingerprint_str": "aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08",
+  "ok_bool": true,
+  "passed_int": 5,
+  "expected_int": 5,
+  "extra_targets_list": [],
+  "rows_list": [
+   {
+    "target_str": "win32-x64",
+    "ok_bool": true,
+    "present_bool": true,
+    "machine_str": "Windows-10-10.0.20348-SP0",
+    "checks_int": 8,
+    "failed_list": [],
+    "deliverable_dict": {
+     "fry-halftone-0.2.0-win32-x64.zip": "e4f14edc5c72aed8ba580211a33a3c042bef547785b926347e692533fc9f51fa"
+    },
+    "seconds_float": 72.5
+   },
+   {
+    "target_str": "darwin-arm64",
+    "ok_bool": true,
+    "present_bool": true,
+    "machine_str": "macOS-15.8.2-arm64-arm-64bit",
+    "checks_int": 6,
+    "failed_list": [],
+    "deliverable_dict": {
+     "fry-halftone-0.2.0-darwin-arm64.tar.zst": "cd7de56c7470454418154dddae85eb5bb7da1de2d8f611d97bd2f8fc1158291b"
+    },
+    "seconds_float": 23.1
+   },
+   {
+    "target_str": "darwin-x64",
+    "ok_bool": true,
+    "present_bool": true,
+    "machine_str": "macOS-15.7.9-x86_64-i386-64bit",
+    "checks_int": 6,
+    "failed_list": [],
+    "deliverable_dict": {
+     "fry-halftone-0.2.0-darwin-x64.tar.zst": "4f6ca2354ba3610943c996ebc45a8408309dca806ca9490b39275a4aea9b4dd2"
+    },
+    "seconds_float": 78.1
+   },
+   {
+    "target_str": "linux-arm64",
+    "ok_bool": true,
+    "present_bool": true,
+    "machine_str": "Linux-7.0.0-1017-azure-aarch64-with-glibc2.39",
+    "checks_int": 6,
+    "failed_list": [],
+    "deliverable_dict": {
+     "fry-halftone-0.2.0-linux-arm64.tar.zst": "a99eebccdacc988e73dec43979fdaa74b2a6f6ae4a2cfaeb5467c79e8b5fcefb"
+    },
+    "seconds_float": 22.6
+   },
+   {
+    "target_str": "linux-x64",
+    "ok_bool": true,
+    "present_bool": true,
+    "machine_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+    "checks_int": 6,
+    "failed_list": [],
+    "deliverable_dict": {
+     "fry-halftone-0.2.0-linux-x64.tar.zst": "5345a4f97fa42a97ddbb38e1623db6f54d02f3f099c69f07ed4a9ce0e36e78ae"
+    },
+    "seconds_float": 34.7
+   }
+  ],
+  "summarized_at_str": "2026-11-09T08:34:56+0000",
+  "run_url_str": "https://github.com/fry404006308/fry_p_3d_rip_261108_github_rip_build/actions/runs/42586744610"
+ }
+}

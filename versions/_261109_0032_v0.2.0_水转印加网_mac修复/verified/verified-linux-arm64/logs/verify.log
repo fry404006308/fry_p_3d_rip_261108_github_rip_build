@@ -1,0 +1,181 @@
+
+★ ═══ ① 指纹闸（验收包不带源码） ═══ prebuilt_info.json 的算法指纹 = cpp.lock.json
+✓ 指纹一致：aea1b4527f22296a
+✓ 外壳指纹：13b56a4b8092c3d0…（预编件记录；本机没有外壳源码）
+
+★ ═══ ② 编译（跳过） ═══ ★409 用现成二进制：/home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/prebuilt/linux-arm64
+
+★ ═══ ③ 装配 ═══ bin/ + include/ + examples/ + VERSION + 参数说明（库自报）+ sdk_info（含 dll 的 sha256）
+  参数说明：params_schema.json（fry-halftone-params/3，27 个参数）+ SDK_参数说明.md
+  装配完成：/home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/sdk/fry-halftone-sdk（1.81 MB，17 个文件）
+
+★ ═══ ④ 冒烟 ═══ 导出面 → 包内说明 → 版本探针 → C 接口用例（含说明文件默认值 / 范围真跑）→ golden 逐字节 → 纯 C 示例
+✓ 导出面闸：库导出 11 个名字 = 头文件声明的 11 个 C 接口，一个不多一个不少
+✓ 指纹闸：库自报的算法指纹 = 锁文件（aea1b4527f22296a…）
+✓ 包内说明闸：sdk_info 的 sha256 = bin/libfry_halftone.so 现算 ｜ params_schema.json = 库现场自报（27 个参数）｜ SDK_参数说明.md 每个参数一行
+$ /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/prebuilt/linux-arm64/FryVersionProbe /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/sdk/fry-halftone-sdk/bin/libfry_halftone.so 0.2.0
+✓ 冒烟通过：/home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/sdk/fry-halftone-sdk/bin/libfry_halftone.so 自报版本 0.2.0，算法 water_transfer_depth，指纹 aea1b4527f22296a…
+0.2.0	water_transfer_depth	aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08	
+$ /opt/hostedtoolcache/Python/3.11.18/arm64/bin/python /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/tests/test_c_abi.py --lib /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/sdk/fry-halftone-sdk/bin/libfry_halftone.so --version 0.2.0
+
+── ① 自报家门
+  版本 0.2.0 ｜ 算法 water_transfer_depth ｜ 引擎 cpp ｜ 指纹 aea1b4527f22296a…
+  ✓ 通过（0.0 s）
+
+── ② 正常跑通
+  切片 109 张 ｜ 进度 12 条 ｜ 最后一条 (100, '完成') ｜ 尺寸 {'rule_str': 'z 高度', 'authored_extents_mm_list': [2.0, 1.0, 0.5], 'scale_float': 2.0, 'longest_edge_mm_float': 4.0, 'height_z_mm_float': 1.0, 'orient_axis_map_str': 'x←+x ｜ y←+y ｜ z←+z'}
+  ✓ 通过（0.0 s）
+
+── ③ 中文路径
+  中文路径（模型 + 输出）切片 109 张 ✓
+  ✓ 通过（0.0 s）
+
+── ④ JSON 参数真的生效
+  层数 4 mm→409 / 6 mm→609 ｜ 落墨 无K 364810 / K×1 172472 / K×0.5 231819 ｜ 色带 1.20→364810 / 0.60→386888 / 2.40→196064
+  ✓ 通过（1.8 s）
+
+── ⑤ 反向 · 参数错
+  rc=2（期望 2）找不到模型文件：/tmp/fry_sdk_abi_4ws3fvhx/根本不存在.glb
+  rc=2（期望 2）params 里有不认识的键 '没有这个键'（可用：target_height_mm, target_longest_edge_mm, ink_c_um, ink_m_um, ink_y_um, ink_k_um, use_black_k, black_k_amount, color_thickness_mm, band_uninked_fill, support_enable, output_width_px, voxel_mm, orient_mode, orient_up, orient_front, orient_yaw_deg, threads, wt_engine, wt_preset, wt_outward_columns, wt_outward_strength, wt_outward_attenuation_mm_inv, wtu_columns, wtu_ray_origin, wtu_move, wtu_dither）
+  rc=2（期望 2）support_enable 必须是 true 或 false（JSON 布尔值）—— ⚠ 字符串 "false" 会被很多语言当成「真」
+  rc=2（期望 2）尺寸只能给一个：target_height_mm（z 高度）与 target_longest_edge_mm（最长边）同时给了
+  rc=2（期望 2）必须给尺寸：target_height_mm（成品 z 高度，0 = 保持模型自带尺寸）或 target_longest_edge_mm（成品最长边），二选一
+  rc=2（期望 2）use_black_k=true 需要同时给 ink_k_um（K 墨满喷厚度 µm）
+  rc=2（期望 2）black_k_amount 必须在 [0, 1] 之间，收到 1.5
+  rc=2（期望 2）output_width_px 要么是 null，要么是整数（不能带小数点）
+  rc=2（期望 2）各墨满喷厚度都是 0：没有任何彩墨可打
+  rc=2（期望 2）requestJson 里必须有 "model" 和 "out" 两个非空字符串字段
+  rc=1（期望 1）出片失败：输出宽度 1 小于模型本身的 39 —— 拒绝裁切模型
+  ✓ 通过（0.0 s）
+
+── ⑥ 反向 · 暂不支持
+  progressive.glb → rc=7（期望 7）：载入模型失败：JPEG 贴图：jpeg: 渐进式 / 无损 / 算术编码的 JPEG 暂不支持（SOF 0xC2）
+  instanced.glb → rc=7（期望 7）：载入模型失败：同一个节点被多个父节点引用（实例化）暂不支持
+  near_rigid.glb → rc=7（期望 7）：载入模型失败：节点变换「几乎是」刚体变换（max|R·Rᵀ−I| = 2e-07），trimesh 会用 SVD 修正，C++ 版暂不支持
+  broken_jpeg.glb → rc=1（期望 1）：载入模型失败：JPEG 贴图解码失败：jpeg: 段长度越界
+  对照组 plain.glb → rc=0
+  对照组 moved.glb → rc=0
+  ✓ 通过（0.0 s）
+
+── ⑦ 反向 · 中止
+  中止后返回码 5（期望 5）
+  ✓ 通过（0.1 s）
+
+── ⑧ 反向 · 并发
+  第二个并发作业 rc=6（期望 6）：已经有一个加网作业在跑（同一时刻只许一个） ｜ 第一个 rc=0
+  ✓ 通过（0.0 s）
+
+── ⑨ 反向 · 结果缓冲太小
+  resultJson 只给 16 字节 → rc=2：resultJson 缓冲不够，需要 1136 字节
+  ✓ 通过（0.0 s）
+
+── ⑩ 参数说明的默认值是真的
+  fry-halftone-params/3 ｜ 27 个参数 ｜ 只给尺寸 md5 d5e2d7a8c80f ｜ 默认值全写出 d5e2d7a8c80f ｜ 写错一个默认值(ink_c_um+100) 8f690e8a1b88
+  统一引擎四个预设：省略 = 显式默认值（回显与 md5 都相同）｜ md5 he500 d5e2d7a8 / he510 e5134cb9 / he520 d3b79cc1 / custom d3b79cc1
+  ✓ 通过（0.6 s）
+
+── ⑪ 参数说明的取值范围是真的
+  压线探针 164 个（27 个参数）｜ 收拒与说明不一致 0 个
+  ✓ 通过（0.0 s）
+
+✓ C 接口用例 11 / 11 通过
+$ /opt/hostedtoolcache/Python/3.11.18/arm64/bin/python /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/tests/test_golden.py --lib /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/sdk/fry-halftone-sdk/bin/libfry_halftone.so
+golden：23 件（Python 生产线标准答案）｜ 库 libfry_halftone.so ｜ 引擎 cpp
+✓ hemi_z3                        md5 d373c0c8abfe ｜ 309 张 ｜ 落墨 110245 ｜ 色带 1.2 mm ｜ 0.37 s
+✓ box_l4                         md5 d5e2d7a8c80f ｜ 109 张 ｜ 落墨 93398 ｜ 色带 1.2 mm ｜ 0.04 s
+✓ box_l4_k400                    md5 86f23d62d8df ｜ 109 张 ｜ 落墨 35308 ｜ 色带 1.6 mm ｜ 0.04 s
+✓ box_z1_layer20um               md5 9f324970e195 ｜ 59 张 ｜ 落墨 47082 ｜ 色带 1.2 mm ｜ 0.02 s
+✓ sphere_l5_k400_amt05_band08    md5 bd7b3fcdb126 ｜ 509 张 ｜ 落墨 604979 ｜ 色带 0.8 mm ｜ 0.38 s
+✓ sphere_l5_white_nosup_w64      md5 65af19dcbffb ｜ 509 张 ｜ 落墨 645755 ｜ 色带 1.2 mm ｜ 0.39 s
+✓ sphere_l5_inks_300_600_200     md5 4c75ceb19344 ｜ 509 张 ｜ 落墨 620394 ｜ 色带 1.1 mm ｜ 0.38 s
+✓ jpeg_trs_sphere_l5_band16      md5 743f6268def9 ｜ 223 张 ｜ 落墨 120995 ｜ 色带 1.6 mm ｜ 0.10 s
+✓ vcolor_material_box_l4         md5 07b30deb5323 ｜ 409 张 ｜ 落墨 573534 ｜ 色带 1.2 mm ｜ 0.25 s
+✓ gltf_modes_mix_l12             md5 a83708ae752b ｜ 161 张 ｜ 落墨 925936 ｜ 色带 1.2 mm ｜ 0.71 s
+✓ box_l4_up_long_front_mid       md5 63ab21654cb3 ｜ 409 张 ｜ 落墨 107399 ｜ 色带 1.2 mm ｜ 0.08 s
+✓ hemi_l6_yaw45                  md5 e0321324ed01 ｜ 309 张 ｜ 落墨 110037 ｜ 色带 1.2 mm ｜ 0.35 s
+✓ box_l12_bignoise               md5 e3911c218fc6 ｜ 309 张 ｜ 落墨 2100373 ｜ 色带 1.2 mm ｜ 0.65 s
+✓ box_l4_he510                   md5 e5134cb910fc ｜ 109 张 ｜ 落墨 94346 ｜ 色带 1.2 mm ｜ 0.06 s
+✓ box_l4_he520                   md5 d3b79cc19e97 ｜ 109 张 ｜ 落墨 93870 ｜ 色带 1.2 mm ｜ 0.07 s
+✓ box_l4_custom_edt_compact      md5 4ffe53a5e29b ｜ 109 张 ｜ 落墨 93398 ｜ 色带 1.2 mm ｜ 0.05 s
+✓ hemi_z3_he520                  md5 e0fcf23170c4 ｜ 309 张 ｜ 落墨 110942 ｜ 色带 1.2 mm ｜ 0.58 s
+✓ hemi_l6_yaw90_he510            md5 748ea688887f ｜ 309 张 ｜ 落墨 110552 ｜ 色带 1.2 mm ｜ 0.58 s
+✓ jpeg_trs_sphere_l5_band16_he520 md5 d0c49f2f3fd1 ｜ 223 张 ｜ 落墨 121046 ｜ 色带 1.6 mm ｜ 0.16 s
+✓ sphere_l5_white_nosup_w64_he510_edt md5 3e999fba4fec ｜ 509 张 ｜ 落墨 645755 ｜ 色带 1.2 mm ｜ 0.44 s
+✓ sphere_l5_he520_a025_l8        md5 4497f51b7b4c ｜ 509 张 ｜ 落墨 645731 ｜ 色带 1.2 mm ｜ 0.66 s
+✓ gltf_modes_mix_l12_custom_pt_optical md5 79d9a01c7fd9 ｜ 161 张 ｜ 落墨 931760 ｜ 色带 1.2 mm ｜ 1.21 s
+✓ box_l12_bignoise_he520         md5 5e182b982129 ｜ 309 张 ｜ 落墨 2102979 ｜ 色带 1.2 mm ｜ 1.29 s
+✓ golden 23 / 23 件逐字节一致
+$ /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/prebuilt/linux-arm64/FryHalftoneDemoC /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/tests/data/vertex_gray_box.glb /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/smoke_c_demo 1
+SDK 版本   : 0.2.0
+加网算法   : water_transfer_depth（引擎 cpp）
+算法指纹   : aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08
+[  1%] 准备作业
+[  5%] 载入模型
+[ 25%] 体素化
+[ 30%] 取色与墨量编码
+[ 41%] 取色与墨量编码
+[ 47%] 取色与墨量编码
+[ 55%] 取色与墨量编码
+[ 75%] 加网（水转印+深度抖动）
+[ 82%] 写 BMP 切片
+[ 89%] 写 BMP 切片
+[ 96%] 写 BMP 切片
+[100%] 完成
+成功：切片与 slice_metadata.json 已写出
+✓ 纯 C 示例真跑通过：109 张 BMP
+$ /opt/hostedtoolcache/Python/3.11.18/arm64/bin/python /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/tests/test_cli_contract.py --cli /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/sdk/fry-halftone-sdk/bin/fry-halftone-cli --version 0.2.0
+命令行契约：/home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/sdk/fry-halftone-sdk/bin/fry-halftone-cli
+  ✓ info --json：名字 / 版本 / 64 位算法指纹
+  ✓ --version 恰好是 `fry-halftone-cli 0.2.0`（= 库自报）
+  ✓ 版本 = 本次出包的版本 0.2.0
+  ✓ --help 写全了 slice 用法与开关
+  ✓ 退出码 2：无参数
+  ✓ 退出码 2：缺 --out
+  ✓ 退出码 3：模型不存在
+  ✓ 退出码 2：负高度
+  ✓ 退出码 2：两个尺寸都给
+  ✓ 退出码 2：一个尺寸都不给
+  ✓ 退出码 2：不认识的命令
+  ✓ 退出码 4：输出目录非空（含隐藏文件）
+  ✓ 退出码 2：开关与 --params 里的同一个键重复
+  ✓ 退出码 2：库拒收的参数值（JSON 信封 success=false, code=2）
+  ✓ golden hemi_z3                      d373c0c8abfe ｜ 309 张 ｜ 0.37 s
+  ✓ golden box_l4                       d5e2d7a8c80f ｜ 109 张 ｜ 0.05 s
+  ✓ golden box_l4_k400                  86f23d62d8df ｜ 109 张 ｜ 0.05 s
+  ✓ golden box_z1_layer20um             9f324970e195 ｜ 59 张 ｜ 0.03 s
+  ✓ golden sphere_l5_k400_amt05_band08  bd7b3fcdb126 ｜ 509 张 ｜ 0.39 s
+  ✓ golden sphere_l5_white_nosup_w64    65af19dcbffb ｜ 509 张 ｜ 0.41 s
+  ✓ golden sphere_l5_inks_300_600_200   4c75ceb19344 ｜ 509 张 ｜ 0.40 s
+  ✓ golden jpeg_trs_sphere_l5_band16    743f6268def9 ｜ 223 张 ｜ 0.11 s
+  ✓ golden vcolor_material_box_l4       07b30deb5323 ｜ 409 张 ｜ 0.27 s
+  ✓ golden gltf_modes_mix_l12           a83708ae752b ｜ 161 张 ｜ 0.72 s
+  ✓ golden box_l4_up_long_front_mid     63ab21654cb3 ｜ 409 张 ｜ 0.09 s
+  ✓ golden hemi_l6_yaw45                e0321324ed01 ｜ 309 张 ｜ 0.37 s
+  ✓ golden box_l12_bignoise             e3911c218fc6 ｜ 309 张 ｜ 0.67 s
+  ✓ golden box_l4_he510                 e5134cb910fc ｜ 109 张 ｜ 0.07 s
+  ✓ golden box_l4_he520                 d3b79cc19e97 ｜ 109 张 ｜ 0.07 s
+  ✓ golden box_l4_custom_edt_compact    4ffe53a5e29b ｜ 109 张 ｜ 0.05 s
+  ✓ golden hemi_z3_he520                e0fcf23170c4 ｜ 309 张 ｜ 0.60 s
+  ✓ golden hemi_l6_yaw90_he510          748ea688887f ｜ 309 张 ｜ 0.60 s
+  ✓ golden jpeg_trs_sphere_l5_band16_he520 d0c49f2f3fd1 ｜ 223 张 ｜ 0.17 s
+  ✓ golden sphere_l5_white_nosup_w64_he510_edt 3e999fba4fec ｜ 509 张 ｜ 0.46 s
+  ✓ golden sphere_l5_he520_a025_l8      4497f51b7b4c ｜ 509 张 ｜ 0.69 s
+  ✓ golden gltf_modes_mix_l12_custom_pt_optical 79d9a01c7fd9 ｜ 161 张 ｜ 1.23 s
+  ✓ golden box_l12_bignoise_he520       5e182b982129 ｜ 309 张 ｜ 1.30 s
+  ── golden 经 CLI：23 / 23 件逐字节一致
+  ✓ slice 子命令（开关 + --params 合并）hemi_z3 == 标准答案
+  ✓ slice 子命令（开关 + --params 合并）box_l4 == 标准答案
+  ✓ --json：12 条 progress + 1 个 result 信封，sliceCount = 目录里 109 张（中文路径）
+  ✓ --json 模式下 stderr 仍有 `slices=N`（云端 worker 的契约）
+  ✓ --json 结果信封的 outputDirectory 与 slice_metadata.json
+  ✓ schema：库自报的参数白名单（fry-halftone-params/3，27 个参数）
+  ✓ schema == 包里的 params_schema.json
+✓ 命令行契约：44 项，0 项没过
+✓ 交付清单闸：full 等级 17 项齐全 ｜ 版本号 0.2.0 处处一致（VERSION 文件、sdk_info.json、dll 自报 GetVersion()、包名）
+
+★ ═══ ⑤ 打包 ═══ tar.zst
+$ tar --zstd -cf /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/fry-halftone-0.2.0-linux-arm64.tar.zst -C /home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/pack fry-halftone
+  产物：/home/runner/work/fry_p_3d_rip_261108_github_rip_build/fry_p_3d_rip_261108_github_rip_build/_ci_out/_work_linux-arm64/fry-halftone-verify-kit/out/fry-halftone-0.2.0-linux-arm64.tar.zst（0.77 MB）
+
+★ 逐步耗时：①载荷闸 0.0s ｜ ②编译 0.0s ｜ ③装配 0.0s ｜ ④冒烟 22.2s ｜ ⑤打包 0.0s
+✓ 全部完成，用时 22.3 s ｜ 版本 0.2.0 ｜ 平台 linux-arm64
