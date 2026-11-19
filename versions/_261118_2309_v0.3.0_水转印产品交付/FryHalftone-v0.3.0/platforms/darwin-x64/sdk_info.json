@@ -1,0 +1,74 @@
+{
+ "package_str": "fry-halftone",
+ "version_str": "0.2.0",
+ "platform_str": "darwin-x64",
+ "algorithm_str": "water_transfer_depth",
+ "engine_str": "cpp",
+ "wt_engine_choices_dict": {
+  "wt_engine": [
+   "legacy",
+   "unified"
+  ],
+  "wt_preset": [
+   "he500",
+   "he510",
+   "he520",
+   "custom"
+  ]
+ },
+ "algorithm_fingerprint_str": "aea1b4527f22296a3cdf8ac3ac5b2e67a4e3e78bd7fc7d74bf0574152ee53a08",
+ "source_commit_str": "b123dade1600606df9475b8685b8c1a680c2aad3",
+ "payload_file_count_int": 51,
+ "library_file_str": "bin/libfry_halftone.dylib",
+ "library_sha256_str": "35f00411d622639b3600f3e6732b344312b35bb567af894f6712869c2d370811",
+ "import_library_file_str": "",
+ "import_library_sha256_str": "",
+ "header_file_str": "include/fry_halftone.h",
+ "params_schema_file_str": "params_schema.json",
+ "params_schema_id_str": "fry-halftone-params/3",
+ "params_schema_sha256_str": "9fb2956c278a03bc1aac9e42ec9bfa4d22b06f2c1450fea4698cdea11a092c56",
+ "param_count_int": 27,
+ "params_doc_file_str": "SDK_参数说明.md",
+ "built_at_str": "2026-11-09T08:33:26+0000",
+ "built_on_str": "Darwin x86_64",
+ "abi_str": "C ABI；Windows 调用约定 __stdcall，其它平台默认",
+ "header_language_str": "C89 兼容（纯 C / C++ / C# P-Invoke / Delphi 都能用）",
+ "cxx_standard_str": "C++17",
+ "compiler_str": "zig 0.16.0（clang + libc++ 静态）-target x86_64-macos-none",
+ "runtime_str": "libstdc++ / libgcc 静态链接；依赖系统 glibc",
+ "min_os_str": "macOS ≥ 13.0（实测：Mach-O 的 minos）x86-64",
+ "build_origin_str": "prebuilt：zig 0.16.0 交叉编译（Windows 宿主）-target x86_64-macos-none",
+ "thread_safety_str": "同一时刻只跑一个作业（并发调用返回 6 BUSY）；Cancel 可从其它线程调；进度回调在调用线程上同步触发",
+ "memory_hint_str": "峰值随体素数线性增长；17 mm 半球件约 0.83 GB",
+ "network_bool": false,
+ "writes_registry_bool": false,
+ "entry_points_list": [
+  "FryHalftone_Cancel",
+  "FryHalftone_GetAlgorithmFingerprint",
+  "FryHalftone_GetAlgorithmName",
+  "FryHalftone_GetEngine",
+  "FryHalftone_GetParamSchemaJson",
+  "FryHalftone_GetVersion",
+  "FryHalftone_GetWorkerPathUtf8",
+  "FryHalftone_SetWorkerPathUtf8",
+  "FryHalftone_SliceModel",
+  "FryHalftone_SliceModelJsonUtf8",
+  "FryHalftone_SliceModelUtf8"
+ ],
+ "return_codes_dict": {
+  "0": "OK",
+  "1": "FAILED",
+  "2": "BAD_ARGUMENT",
+  "5": "CANCELLED",
+  "6": "BUSY",
+  "7": "UNSUPPORTED（模型写法暂不支持，原因写在 errorBuffer）"
+ },
+ "version_sources_list": [
+  "VERSION",
+  "sdk_info.json",
+  "FryHalftone_GetVersion()"
+ ],
+ "delivery_manifest_file_str": "delivery_manifest.json",
+ "self_check_cmd_str": "python verify_delivery.py",
+ "file_properties_dict": {}
+}

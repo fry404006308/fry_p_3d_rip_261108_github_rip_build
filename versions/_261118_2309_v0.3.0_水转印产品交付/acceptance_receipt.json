@@ -1,0 +1,80 @@
+{
+  "product_version": "0.3.0",
+  "runtime_version": "0.2.0",
+  "archive": "FryHalftone-v0.3.0.zip",
+  "sha256": "fd9b3d833991fda45ee0d32b95c673abcd96ea2ed17c48555df8969f0b868d03",
+  "size_bytes": 5313906,
+  "ci": {
+    "run": "https://github.com/fry404006308/fry_p_3d_rip_261108_github_rip_build/actions/runs/44477466207",
+    "workflow_sha": "21efc1a44f3973baf9dfefe68916b8efd3a8c8e6",
+    "started_utc": "2026-11-19T07:09:41Z",
+    "completed_utc": "2026-11-19T07:11:58Z",
+    "targets": {
+      "win32-x64": {
+        "os": "Windows-10-10.0.20348-SP0",
+        "abi_passed": 11,
+        "library_golden_passed": 23,
+        "cli_golden_passed": 23,
+        "cli_contract_passed": 44,
+        "library_and_cli_match_ci_bytes": true
+      },
+      "darwin-arm64": {
+        "os": "macOS-15.8.2-arm64-arm-64bit",
+        "abi_passed": 11,
+        "library_golden_passed": 23,
+        "cli_golden_passed": 23,
+        "cli_contract_passed": 44,
+        "library_and_cli_match_ci_bytes": true
+      },
+      "darwin-x64": {
+        "os": "macOS-15.7.9-x86_64-i386-64bit",
+        "abi_passed": 11,
+        "library_golden_passed": 23,
+        "cli_golden_passed": 23,
+        "cli_contract_passed": 44,
+        "library_and_cli_match_ci_bytes": true
+      },
+      "linux-arm64": {
+        "os": "Linux-7.0.0-1017-azure-aarch64-with-glibc2.39",
+        "abi_passed": 11,
+        "library_golden_passed": 23,
+        "cli_golden_passed": 23,
+        "cli_contract_passed": 44,
+        "library_and_cli_match_ci_bytes": true
+      },
+      "linux-x64": {
+        "os": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+        "abi_passed": 11,
+        "library_golden_passed": 23,
+        "cli_golden_passed": 23,
+        "cli_contract_passed": 44,
+        "library_and_cli_match_ci_bytes": true
+      }
+    }
+  },
+  "offline_zip_tests": {
+    "linux": {
+      "product_version": "0.3.0",
+      "sdk_version": "0.2.0",
+      "target": "linux-x64",
+      "passed": true,
+      "file_hashes": 102,
+      "he500_readme_layers": 109,
+      "he520_checked_layers": 109,
+      "tamper_detected": true,
+      "archive_sha256": "fd9b3d833991fda45ee0d32b95c673abcd96ea2ed17c48555df8969f0b868d03"
+    },
+    "windows": {
+      "product_version": "0.3.0",
+      "sdk_version": "0.2.0",
+      "target": "win32-x64",
+      "passed": true,
+      "file_hashes": 102,
+      "he500_readme_layers": 109,
+      "he520_checked_layers": 109,
+      "tamper_detected": true,
+      "archive_sha256": "fd9b3d833991fda45ee0d32b95c673abcd96ea2ed17c48555df8969f0b868d03"
+    }
+  },
+  "source_payload_matches_in_archive": []
+}

@@ -2,6 +2,10 @@
 
 > ★461 建。产品：水转印加网 SDK（HE500/510/520 统一 dll）；打包仓：`fry_p_3d_rip_260915_auto_build_dll`。
 
+## 产品交付
+
+[水转印 v0.3.0 交付下载与手册](versions/_261118_2309_v0.3.0_水转印产品交付/README.md) 包含五个平台的原生库、CLI、接入文档和验收样例。产品交付号与运行时版本分别记录在 PRODUCT.json 中。
+
 ## 这个仓是什么
 
 **只放编译好的二进制 + 验收脚本，不放算法源码**的公开仓。用途只有一个：借 GitHub 的真机（Linux x64 / Linux ARM64 / macOS Apple 芯片 / macOS Intel / Windows）

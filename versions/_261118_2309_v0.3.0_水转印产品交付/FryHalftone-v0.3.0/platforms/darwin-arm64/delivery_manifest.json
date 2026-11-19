@@ -1,0 +1,151 @@
+{
+ "schema_str": "fry-halftone-delivery/1",
+ "package_str": "fry-halftone",
+ "level_str": "full",
+ "platform_str": "darwin-arm64",
+ "version_str": "0.2.0",
+ "how_to_verify_str": "python verify_delivery.py        # 只用 Python 标准库，双击也行",
+ "levels_dict": {
+  "runtime": "把 dll 换上去跑起来",
+  "integration": "别的软件链接 / 调用它",
+  "full": "完整交付"
+ },
+ "files_list": [
+  {
+   "path_str": "bin/libfry_halftone.dylib",
+   "level_str": "runtime",
+   "cat_str": "二进制",
+   "why_str": "动态库本体 —— 没有它什么都谈不上",
+   "sha256_str": "9ed530891c31451f728fae2a3a7ef1352b699e46f41dcc6631400f8751332c8f",
+   "size_int": 1478216
+  },
+  {
+   "path_str": "VERSION",
+   "level_str": "runtime",
+   "cat_str": "身份",
+   "why_str": "一眼能看到版本号（不用解析 JSON、不用加载库）",
+   "sha256_str": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9",
+   "size_int": 6
+  },
+  {
+   "path_str": "sdk_info.json",
+   "level_str": "runtime",
+   "cat_str": "身份",
+   "why_str": "版本 / 平台 / 算法指纹 / dll 的 sha256 / 构建环境 —— 对方核对「我拿到的是哪一版」靠它",
+   "sha256_str": "86d25e20ce2f948ce263d8ccbb758f3ca7e1e80ed03b63e6d89d2aa7fae5032a",
+   "size_int": 2731
+  },
+  {
+   "path_str": "params_schema.json",
+   "level_str": "runtime",
+   "cat_str": "契约",
+   "why_str": "机器可读的参数白名单：对方可以据此自动生成设置界面 / 校验参数",
+   "sha256_str": "9fb2956c278a03bc1aac9e42ec9bfa4d22b06f2c1450fea4698cdea11a092c56",
+   "size_int": 8259
+  },
+  {
+   "path_str": "SDK_参数说明.md",
+   "level_str": "runtime",
+   "cat_str": "文档",
+   "why_str": "人读版参数说明（由 params_schema.json 逐行生成，不会与库脱节）",
+   "sha256_str": "4a6fdab5a450136bdbc1d6b6d043bba567ec342c0db962d1e71f74a2f24d07c4",
+   "size_int": 6970
+  },
+  {
+   "path_str": "delivery_manifest.json",
+   "level_str": "runtime",
+   "cat_str": "清单",
+   "why_str": "★ 机器可读的交付清单：对方拿到包能**自证完整**，不用问我们",
+   "sha256_str": "",
+   "size_int": 0
+  },
+  {
+   "path_str": "bin/fry-halftone-cli",
+   "level_str": "integration",
+   "cat_str": "二进制",
+   "why_str": "★409 命令行版（协议与 lmst-cli 同构）：桌面端 / 云端 slice-worker 按子进程调；它用的就是同目录这个库",
+   "sha256_str": "59a50287b938d6781297441f353a5b08d4a86bc45d7d21cd16665643f2e88a41",
+   "size_int": 637168
+  },
+  {
+   "path_str": "include/fry_halftone.h",
+   "level_str": "integration",
+   "cat_str": "契约",
+   "why_str": "C 接口声明 —— 不给头文件，对方只能手抄声明（抄错就是内存错乱）",
+   "sha256_str": "48f0b9cb96fafb8dfa30d9f73575eb35a8f7f7b640e1d17ce7525500b690f6d1",
+   "size_int": 16978
+  },
+  {
+   "path_str": "SDK_使用说明.md",
+   "level_str": "integration",
+   "cat_str": "文档",
+   "why_str": "集成说明（中文）：怎么加载、返回码、线程模型、内存、编译器与运行库要求",
+   "sha256_str": "00abf4f738287ff410b003a4696f45768c970d241aded1f7167cfb0427c0481e",
+   "size_int": 32092
+  },
+  {
+   "path_str": "examples/c/fry_halftone_demo.c",
+   "level_str": "integration",
+   "cat_str": "示例",
+   "why_str": "最小可编译示例（C）—— 对方照抄就能跑通",
+   "sha256_str": "64c62d36f380bd0f078acf43687d34a4aa7169b0ec7b9e180fcae282fdcc6158",
+   "size_int": 4680
+  },
+  {
+   "path_str": "examples/csharp/FryHalftoneDemo.cs",
+   "level_str": "integration",
+   "cat_str": "示例",
+   "why_str": "C# P/Invoke 示例：公司别的软件多是 C#/WPF，字符集与调用约定最容易错",
+   "sha256_str": "2a2759421fc3aefcda5e528483f88e20cd9e3128388526e79e97d33d3d13c4e5",
+   "size_int": 5039
+  },
+  {
+   "path_str": "examples/python/fry_halftone_demo.py",
+   "level_str": "integration",
+   "cat_str": "示例",
+   "why_str": "Python ctypes 示例：脚本化验证 / 自动化测试最省事",
+   "sha256_str": "40dd821ee7c135e37e5f1b02b5b28e857c281bee5fb7496c3e5332f7456c22ed",
+   "size_int": 5121
+  },
+  {
+   "path_str": "SDK_README_EN.md",
+   "level_str": "full",
+   "cat_str": "文档",
+   "why_str": "英文说明：对外 / 非中文同事",
+   "sha256_str": "2c258ad5178287e53ca356e076a74b74e6f1694440666350a9190266911b71f2",
+   "size_int": 13680
+  },
+  {
+   "path_str": "CHANGELOG.md",
+   "level_str": "full",
+   "cat_str": "文档",
+   "why_str": "变更历史 —— 「上一版到这一版改了什么」不该靠问人",
+   "sha256_str": "865afbd8b36207e2b4a3ef941ca0fb7c655a99cd8c95814930d985b0cf0c5a69",
+   "size_int": 33442
+  },
+  {
+   "path_str": "LICENSE.txt",
+   "level_str": "full",
+   "cat_str": "合规",
+   "why_str": "许可与第三方声明：别的部门集成前要过合规，没有它会被卡",
+   "sha256_str": "c67a80be8d2b635cb3d678c339f3e392abbe8cb4fd57e08cc44cd7ddb63e173e",
+   "size_int": 2814
+  },
+  {
+   "path_str": "verify_delivery.py",
+   "level_str": "full",
+   "cat_str": "自检",
+   "why_str": "★ 对方自检脚本（只用标准库）：双击就能验「包是不是完整、dll 是不是这一份」",
+   "sha256_str": "ecbe9136629981e0cc7bea36a3e950ec352fc2e5782d65de3ad1a79190d791c4",
+   "size_int": 8963
+  },
+  {
+   "path_str": "SHA256SUMS.txt",
+   "level_str": "full",
+   "cat_str": "完整性",
+   "why_str": "全部文件的 sha256：传输 / 拷贝损坏当场看得出来",
+   "sha256_str": "",
+   "size_int": 0
+  }
+ ]
+}
