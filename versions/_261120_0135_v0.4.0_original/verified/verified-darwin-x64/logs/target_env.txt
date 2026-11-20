@@ -1,0 +1,7 @@
+date: 2026-11-20 09:36:05 +0000
+uname: Darwin iad01-dz253-8fb6f3f8-5d21-4917-ae54-6684fd0e7f5d-8E3D29017E4E.local 24.6.0 Darwin Kernel Version 24.6.0: Tue Jul 21 20:50:07 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_X86_64 x86_64
+ProductName:		macOS
+ProductVersion:		15.7.9
+BuildVersion:		24G830
+hw.optional.arm64: 0
+python: 3.11.9 x86_64

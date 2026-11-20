@@ -50,8 +50,17 @@
     "kit": "79c0e61f924317990a997a30cafe53cbae500dcc62dc14b06d12a881dd0a13e3",
     "win32-x64": "5d22828da6c8dcfd819c8ee2448e35e1c0c5c70fb669b35f34ec657b1cf2cd0b"
    },
-   "status_str": "staged",
-   "staged_at_str": "2026-11-20T01:35:02-0800"
+   "status_str": "verified",
+   "staged_at_str": "2026-11-20T01:35:02-0800",
+   "run_id_str": "44712043648",
+   "verified_at_str": "2026-11-20T01:37:58-0800",
+   "platforms_dict": {
+    "win32-x64": true,
+    "darwin-arm64": true,
+    "darwin-x64": true,
+    "linux-arm64": true,
+    "linux-x64": true
+   }
   }
  ]
 }

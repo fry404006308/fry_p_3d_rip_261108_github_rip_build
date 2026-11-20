@@ -1,0 +1,45 @@
+{
+  "ci": "https://github.com/fry404006308/fry_p_3d_rip_261108_github_rip_build/actions/runs/44712043648",
+  "targets": {
+    "win32-x64": {
+      "platform": "Windows-10-10.0.20348-SP0",
+      "lib_golden": "24/24",
+      "cli_golden": "24/24",
+      "cli_contract": "45",
+      "orientation_case": "original_world_axes_l3",
+      "archive_verified": true
+    },
+    "darwin-arm64": {
+      "platform": "macOS-15.8.2-arm64-arm-64bit",
+      "lib_golden": "24/24",
+      "cli_golden": "24/24",
+      "cli_contract": "45",
+      "orientation_case": "original_world_axes_l3",
+      "archive_verified": true
+    },
+    "darwin-x64": {
+      "platform": "macOS-15.7.9-x86_64-i386-64bit",
+      "lib_golden": "24/24",
+      "cli_golden": "24/24",
+      "cli_contract": "45",
+      "orientation_case": "original_world_axes_l3",
+      "archive_verified": true
+    },
+    "linux-arm64": {
+      "platform": "Linux-7.0.0-1017-azure-aarch64-with-glibc2.39",
+      "lib_golden": "24/24",
+      "cli_golden": "24/24",
+      "cli_contract": "45",
+      "orientation_case": "original_world_axes_l3",
+      "archive_verified": true
+    },
+    "linux-x64": {
+      "platform": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+      "lib_golden": "24/24",
+      "cli_golden": "24/24",
+      "cli_contract": "45",
+      "orientation_case": "original_world_axes_l3",
+      "archive_verified": true
+    }
+  }
+}

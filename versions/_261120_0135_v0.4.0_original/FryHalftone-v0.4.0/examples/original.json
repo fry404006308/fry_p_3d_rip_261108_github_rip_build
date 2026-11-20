@@ -1,0 +1,8 @@
+{
+  "model": "examples/original_scene_node.glb",
+  "out": "first-original",
+  "params": {
+    "target_longest_edge_mm": 3,
+    "orient_mode": "original"
+  }
+}

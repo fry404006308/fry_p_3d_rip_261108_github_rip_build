@@ -1,0 +1,9 @@
+{
+  "model": "vertex_gray_box.glb",
+  "out": "slices",
+  "params": {
+    "wt_engine": "unified",
+    "target_longest_edge_mm": 4.0,
+    "wt_preset": "he520"
+  }
+}

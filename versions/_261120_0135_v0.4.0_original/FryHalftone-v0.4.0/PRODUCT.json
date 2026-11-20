@@ -1,0 +1,58 @@
+{
+  "product": "FryHalftone",
+  "product_version": "0.4.0",
+  "runtime_version": "0.4.0",
+  "algorithm_fingerprint": "92a6c32c42740e5fbda75b905b626b1abd02c81c3b71b6249576f6d223348834",
+  "platforms": {
+    "win32-x64": {
+      "package_dir": "platforms/win32-x64",
+      "library": "platforms/win32-x64/bin/fry_halftone.dll",
+      "cli": "platforms/win32-x64/bin/fry-halftone-cli.exe",
+      "library_sha256": "a8bfb39633c4560b802bada9c613bd8ff1c5f40a5d0dc795cbc0a51024201f4c",
+      "cli_sha256": "28fa3d4897b222e34f9c90c5e3403448cdde7d93c423fb9e0d51917c79e8e47e",
+      "source_archive_sha256": "5d22828da6c8dcfd819c8ee2448e35e1c0c5c70fb669b35f34ec657b1cf2cd0b",
+      "min_os": "Windows 10 x64 及以上"
+    },
+    "darwin-arm64": {
+      "package_dir": "platforms/darwin-arm64",
+      "library": "platforms/darwin-arm64/bin/libfry_halftone.dylib",
+      "cli": "platforms/darwin-arm64/bin/fry-halftone-cli",
+      "library_sha256": "fe4d53e69de2363452dd71eca8e35061fea0fefbbdb44dd7bf3607c484eb9ffb",
+      "cli_sha256": "59a50287b938d6781297441f353a5b08d4a86bc45d7d21cd16665643f2e88a41",
+      "source_archive_sha256": "01ed50201da650cc71f6d9e474ffc3801aa1312c10036bc5866d898c7a21ef3a",
+      "min_os": "macOS ≥ 13.0（实测：Mach-O 的 minos）arm64"
+    },
+    "darwin-x64": {
+      "package_dir": "platforms/darwin-x64",
+      "library": "platforms/darwin-x64/bin/libfry_halftone.dylib",
+      "cli": "platforms/darwin-x64/bin/fry-halftone-cli",
+      "library_sha256": "f827aca236257801703f73809d50ec17aabd09b37f72aeb55856f3bf9e0ddf0d",
+      "cli_sha256": "060309bee0524cb77653b8f7f197593a6ae04351b3646dbb1675233692c48580",
+      "source_archive_sha256": "0f39fc3734575fc42b04e5fb88f8a3dd7b248434b093e294a08ce1e28e169c73",
+      "min_os": "macOS ≥ 13.0（实测：Mach-O 的 minos）x86-64"
+    },
+    "linux-arm64": {
+      "package_dir": "platforms/linux-arm64",
+      "library": "platforms/linux-arm64/bin/libfry_halftone.so",
+      "cli": "platforms/linux-arm64/bin/fry-halftone-cli",
+      "library_sha256": "fa0b0c8032cbfb267437819b365e6184cd314e4fd4484c95037e0d80c1b70b54",
+      "cli_sha256": "c8cc0436dabdcbeafc9a012cce666c252102e10dbd60a2a7c33038f6e4fa1de3",
+      "source_archive_sha256": "314921bd30c6e21fbe6002c9d5b539d9dd959af63469d024d5f0451e2db6ccf5",
+      "min_os": "glibc ≥ 2.17（实测：库引用的最高符号版本 GLIBC_2.17）aarch64"
+    },
+    "linux-x64": {
+      "package_dir": "platforms/linux-x64",
+      "library": "platforms/linux-x64/bin/libfry_halftone.so",
+      "cli": "platforms/linux-x64/bin/fry-halftone-cli",
+      "library_sha256": "3c7a56b089a6ed0578a71a8adda0fe20d1661d6b1f0bae20f4fa02e542f09b72",
+      "cli_sha256": "9102a1a4a9fda1e5fa01373506b5ff0c56c6c80f027e3ab31455dc01be639121",
+      "source_archive_sha256": "724b3033cee6cad5c6b8916d67e59511451ed3f9d48c793390531302ebdcd0b8",
+      "min_os": "glibc ≥ 2.17（实测：库引用的最高符号版本 GLIBC_2.17）x86-64"
+    }
+  },
+  "parameter_schema": "platforms/win32-x64/params_schema.json",
+  "original_bmp_md5": "a1933e99be27da3f2c2f36a7cd35341e",
+  "verification": "docs/verification.json",
+  "quick_check": "check_install.py",
+  "example_request": "examples/original.json"
+}

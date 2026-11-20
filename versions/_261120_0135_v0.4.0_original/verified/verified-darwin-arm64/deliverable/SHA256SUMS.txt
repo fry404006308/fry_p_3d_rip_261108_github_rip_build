@@ -1,0 +1,1 @@
+01ed50201da650cc71f6d9e474ffc3801aa1312c10036bc5866d898c7a21ef3a  fry-halftone-0.4.0-darwin-arm64.tar.zst

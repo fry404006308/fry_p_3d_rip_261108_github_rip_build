@@ -1,0 +1,55 @@
+{
+ "schema_str": "fry-gh-verdict/1",
+ "product_str": "halftone",
+ "version_str": "0.4.0",
+ "version_dir_str": "_261120_0135_v0.4.0_original",
+ "target_str": "darwin-x64",
+ "host_target_str": "darwin-x64",
+ "machine_dict": {
+  "platform_str": "macOS-15.7.9-x86_64-i386-64bit",
+  "machine_str": "x86_64",
+  "python_str": "3.11.9",
+  "runner_str": "GitHub Actions 1000000171",
+  "image_str": "macos15 20260824.0482.1",
+  "macos_str": "15.7.9"
+ },
+ "started_at_str": "2026-11-20T09:36:04+0000",
+ "algorithm_fingerprint_str": "92a6c32c42740e5fbda75b905b626b1abd02c81c3b71b6249576f6d223348834",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 darwin-x64 ｜ 要验 darwin-x64"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "2 个输入与 manifest 一致"
+  },
+  {
+   "key_str": "run_on_target.sh",
+   "ok_bool": true,
+   "detail_str": "rc=0（冒烟九道闸 + golden 23 件逐字节 + 命令行契约 44 项）"
+  },
+  {
+   "key_str": "golden 件数",
+   "ok_bool": true,
+   "detail_str": "登记 24 件 ｜ 日志里 24/24、24/24"
+  },
+  {
+   "key_str": "build_report",
+   "ok_bool": true,
+   "detail_str": "平台 darwin-x64 ｜ 版本 0.4.0"
+  },
+  {
+   "key_str": "交付件",
+   "ok_bool": true,
+   "detail_str": "fry-halftone-0.4.0-darwin-x64.tar.zst"
+  }
+ ],
+ "ok_bool": true,
+ "seconds_float": 50.3,
+ "deliverable_dict": {
+  "fry-halftone-0.4.0-darwin-x64.tar.zst": "0f39fc3734575fc42b04e5fb88f8a3dd7b248434b093e294a08ce1e28e169c73"
+ }
+}

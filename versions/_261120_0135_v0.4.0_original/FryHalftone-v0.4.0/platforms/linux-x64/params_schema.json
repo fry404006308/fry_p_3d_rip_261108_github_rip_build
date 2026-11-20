@@ -1,0 +1,381 @@
+{
+ "schema": "fry-halftone-params/3",
+ "params": [
+  {
+   "name": "target_height_mm",
+   "kind": "number_or_null",
+   "description": "成品 z 高度 mm（摆正后最短轴朝 z）；0 = 保持模型自带尺寸；与 target_longest_edge_mm 二选一",
+   "default": null,
+   "nullable": true,
+   "min": 0.0,
+   "min_exclusive": false
+  },
+  {
+   "name": "target_longest_edge_mm",
+   "kind": "number_or_null",
+   "description": "成品最长边 mm（= 算法仓 TARGET_MM）；与 target_height_mm 二选一",
+   "default": null,
+   "nullable": true,
+   "min": 0.0,
+   "min_exclusive": true
+  },
+  {
+   "name": "ink_c_um",
+   "kind": "number",
+   "description": "C 满喷厚度 µm（默认 400）",
+   "default": 400.0,
+   "nullable": false,
+   "min": 0.0,
+   "min_exclusive": false
+  },
+  {
+   "name": "ink_m_um",
+   "kind": "number",
+   "description": "M 满喷厚度 µm（默认 500）",
+   "default": 500.0,
+   "nullable": false,
+   "min": 0.0,
+   "min_exclusive": false
+  },
+  {
+   "name": "ink_y_um",
+   "kind": "number",
+   "description": "Y 满喷厚度 µm（默认 300）",
+   "default": 300.0,
+   "nullable": false,
+   "min": 0.0,
+   "min_exclusive": false
+  },
+  {
+   "name": "ink_k_um",
+   "kind": "number_or_null",
+   "description": "K 满喷厚度 µm；use_black_k=true 时必须给",
+   "default": null,
+   "nullable": true,
+   "min": 0.0,
+   "min_exclusive": false
+  },
+  {
+   "name": "use_black_k",
+   "kind": "bool",
+   "description": "true ⇒ CMYK 四通道（灰分量挪给 K 墨）",
+   "default": false,
+   "nullable": false
+  },
+  {
+   "name": "black_k_amount",
+   "kind": "unit_interval",
+   "description": "灰分量替换强度 [0,1]（默认 1）",
+   "default": 1.0,
+   "nullable": false,
+   "min": 0.0,
+   "min_exclusive": false,
+   "max": 1.0
+  },
+  {
+   "name": "color_thickness_mm",
+   "kind": "number_or_null",
+   "description": "色带厚度 mm；null = 各墨满喷厚度之和",
+   "default": null,
+   "nullable": true,
+   "min": 0.0,
+   "min_exclusive": true
+  },
+  {
+   "name": "band_uninked_fill",
+   "kind": "choice_fill",
+   "description": "色带里不落彩墨的格子填什么：transparent / white",
+   "default": "transparent",
+   "nullable": false,
+   "choices": [
+    "transparent",
+    "white"
+   ]
+  },
+  {
+   "name": "support_enable",
+   "kind": "bool",
+   "description": "是否打支撑",
+   "default": true,
+   "nullable": false
+  },
+  {
+   "name": "output_width_px",
+   "kind": "int_or_null",
+   "description": "输出 BMP 宽度（喷头数）；null = 按模型实际宽度",
+   "default": null,
+   "nullable": true,
+   "integer": true,
+   "min": 1,
+   "min_exclusive": false
+  },
+  {
+   "name": "voxel_mm",
+   "kind": "vec3_positive",
+   "description": "墨滴尺寸 mm [x, y, z]；z = 层高",
+   "default": [
+    0.137,
+    0.035,
+    0.01
+   ],
+   "nullable": false,
+   "length": 3,
+   "item_min": 0.0,
+   "item_min_exclusive": true
+  },
+  {
+   "name": "orient_mode",
+   "kind": "choice_orient_mode",
+   "description": "★392 加网方向：auto_extent（按边长自动摆正，392 前的老行为）/ axis_map（指定朝上 + 正面）/ original（保持 GLB 场景原始 XYZ）",
+   "default": "auto_extent",
+   "nullable": false,
+   "choices": [
+    "auto_extent",
+    "axis_map",
+    "original"
+   ]
+  },
+  {
+   "name": "orient_up",
+   "kind": "choice_axis",
+   "description": "axis_map 时：模型的哪条有符号轴朝上（= voxel +z，逐层方向；BMP 张数 = 这条边 / 层厚）",
+   "default": "+short",
+   "nullable": false,
+   "choices": [
+    "+x",
+    "-x",
+    "+y",
+    "-y",
+    "+z",
+    "-z",
+    "+long",
+    "-long",
+    "+mid",
+    "-mid",
+    "+short",
+    "-short"
+   ]
+  },
+  {
+   "name": "orient_front",
+   "kind": "choice_axis",
+   "description": "axis_map 时：模型的哪条有符号轴朝正面（= voxel +y，运行方向）；喷孔方向 x = front × up 自动定",
+   "default": "+mid",
+   "nullable": false,
+   "choices": [
+    "+x",
+    "-x",
+    "+y",
+    "-y",
+    "+z",
+    "-z",
+    "+long",
+    "-long",
+    "+mid",
+    "-mid",
+    "+short",
+    "-short"
+   ]
+  },
+  {
+   "name": "orient_yaw_deg",
+   "kind": "number_any",
+   "description": "axis_map 时：定好朝上/正面后再绕 voxel z 转多少度（90 的整数倍用精确值）",
+   "default": 0.0,
+   "nullable": false
+  },
+  {
+   "name": "threads",
+   "kind": "int_or_null",
+   "description": "线程数；null / 0 = 全部硬件线程",
+   "default": null,
+   "nullable": true,
+   "integer": true,
+   "min": 0,
+   "min_exclusive": false
+  },
+  {
+   "name": "wt_engine",
+   "kind": "choice",
+   "description": "★448 水转印引擎：legacy = 原 HE500 C++（默认，一字未改）/ unified = 统一代码（HE500/HE510/HE520）",
+   "default": "legacy",
+   "nullable": false,
+   "choices": [
+    "legacy",
+    "unified"
+   ]
+  },
+  {
+   "name": "wt_preset",
+   "kind": "choice",
+   "description": "unified 时：he500 / he510（全外移）/ he520（光学外移，默认强度 0.5）/ custom（四个开关自己拼）",
+   "default": "he500",
+   "nullable": false,
+   "choices": [
+    "he500",
+    "he510",
+    "he520",
+    "custom"
+   ]
+  },
+  {
+   "name": "wt_outward_columns",
+   "kind": "choice",
+   "description": "unified + he510/he520：柱口径 normal（437 法线柱，默认）/ edt（428~435 老 EDT 柱）",
+   "default": "normal",
+   "nullable": false,
+   "choices": [
+    "normal",
+    "edt"
+   ]
+  },
+  {
+   "name": "wt_outward_strength",
+   "kind": "unit_interval",
+   "description": "unified + he520/custom：外移强度 a ∈ [0,1]（0 = 不挪 = HE500，1 = 全挤到柱头；默认 0.5）",
+   "default": 0.5,
+   "nullable": false,
+   "min": 0.0,
+   "min_exclusive": false,
+   "max": 1.0
+  },
+  {
+   "name": "wt_outward_attenuation_mm_inv",
+   "kind": "attenuation",
+   "description": "unified + he520/custom：衰减代理 λ（1/mm），(0, 1000]，默认 4",
+   "default": 4.0,
+   "nullable": false,
+   "min": 0.0,
+   "min_exclusive": true,
+   "max": 1000.0
+  },
+  {
+   "name": "wtu_columns",
+   "kind": "choice",
+   "description": "unified + custom：柱 edt（EDT 最近表面）/ normal（沿法线射线，默认）",
+   "default": "normal",
+   "nullable": false,
+   "choices": [
+    "edt",
+    "normal"
+   ]
+  },
+  {
+   "name": "wtu_ray_origin",
+   "kind": "choice",
+   "description": "unified + custom + normal 柱：射线起点 voxel（表面体素中心，默认）/ surface_point（曲面最近点）",
+   "default": "voxel",
+   "nullable": false,
+   "choices": [
+    "voxel",
+    "surface_point"
+   ]
+  },
+  {
+   "name": "wtu_move",
+   "kind": "choice",
+   "description": "unified + custom：外移 none（不挪）/ compact（全挤到柱头）/ optical（指数目标深度，默认）",
+   "default": "optical",
+   "nullable": false,
+   "choices": [
+    "none",
+    "compact",
+    "optical"
+   ]
+  },
+  {
+   "name": "wtu_dither",
+   "kind": "choice",
+   "description": "unified + custom + optical：取整抖动 blue_noise（默认）/ none",
+   "default": "blue_noise",
+   "nullable": false,
+   "choices": [
+    "blue_noise",
+    "none"
+   ]
+  }
+ ],
+ "one_of_required": [
+  [
+   "target_height_mm",
+   "target_longest_edge_mm"
+  ]
+ ],
+ "requires": [
+  {
+   "when": "use_black_k",
+   "equals": true,
+   "then_required": "ink_k_um"
+  }
+ ],
+ "only_when": [
+  {
+   "params": [
+    "wt_preset",
+    "wt_outward_columns",
+    "wt_outward_strength",
+    "wt_outward_attenuation_mm_inv",
+    "wtu_columns",
+    "wtu_ray_origin",
+    "wtu_move",
+    "wtu_dither"
+   ],
+   "when": "wt_engine",
+   "equals": [
+    "unified"
+   ]
+  },
+  {
+   "params": [
+    "wtu_columns",
+    "wtu_ray_origin",
+    "wtu_move",
+    "wtu_dither"
+   ],
+   "when": "wt_preset",
+   "equals": [
+    "custom"
+   ]
+  },
+  {
+   "params": [
+    "wt_outward_columns"
+   ],
+   "when": "wt_preset",
+   "equals": [
+    "he510",
+    "he520"
+   ]
+  },
+  {
+   "params": [
+    "wt_outward_strength",
+    "wt_outward_attenuation_mm_inv"
+   ],
+   "when": "wt_preset",
+   "equals": [
+    "he520",
+    "custom"
+   ]
+  }
+ ],
+ "echo_omit_when": [
+  {
+   "params": [
+    "wt_engine",
+    "wt_preset",
+    "wt_outward_columns",
+    "wt_outward_strength",
+    "wt_outward_attenuation_mm_inv",
+    "wtu_columns",
+    "wtu_ray_origin",
+    "wtu_move",
+    "wtu_dither"
+   ],
+   "when": "wt_engine",
+   "equals": [
+    "legacy"
+   ]
+  }
+ ]
+}

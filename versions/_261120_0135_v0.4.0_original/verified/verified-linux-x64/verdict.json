@@ -1,0 +1,55 @@
+{
+ "schema_str": "fry-gh-verdict/1",
+ "product_str": "halftone",
+ "version_str": "0.4.0",
+ "version_dir_str": "_261120_0135_v0.4.0_original",
+ "target_str": "linux-x64",
+ "host_target_str": "linux-x64",
+ "machine_dict": {
+  "platform_str": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+  "machine_str": "x86_64",
+  "python_str": "3.11.18",
+  "runner_str": "GitHub Actions 1000000169",
+  "image_str": "ubuntu22 20261111.360.2",
+  "glibc_str": "glibc 2.35"
+ },
+ "started_at_str": "2026-11-20T09:36:02+0000",
+ "algorithm_fingerprint_str": "92a6c32c42740e5fbda75b905b626b1abd02c81c3b71b6249576f6d223348834",
+ "checks_list": [
+  {
+   "key_str": "平台闸",
+   "ok_bool": true,
+   "detail_str": "本机 linux-x64 ｜ 要验 linux-x64"
+  },
+  {
+   "key_str": "输入闸 sha256",
+   "ok_bool": true,
+   "detail_str": "2 个输入与 manifest 一致"
+  },
+  {
+   "key_str": "run_on_target.sh",
+   "ok_bool": true,
+   "detail_str": "rc=0（冒烟九道闸 + golden 23 件逐字节 + 命令行契约 44 项）"
+  },
+  {
+   "key_str": "golden 件数",
+   "ok_bool": true,
+   "detail_str": "登记 24 件 ｜ 日志里 24/24、24/24"
+  },
+  {
+   "key_str": "build_report",
+   "ok_bool": true,
+   "detail_str": "平台 linux-x64 ｜ 版本 0.4.0"
+  },
+  {
+   "key_str": "交付件",
+   "ok_bool": true,
+   "detail_str": "fry-halftone-0.4.0-linux-x64.tar.zst"
+  }
+ ],
+ "ok_bool": true,
+ "seconds_float": 27.5,
+ "deliverable_dict": {
+  "fry-halftone-0.4.0-linux-x64.tar.zst": "724b3033cee6cad5c6b8916d67e59511451ed3f9d48c793390531302ebdcd0b8"
+ }
+}

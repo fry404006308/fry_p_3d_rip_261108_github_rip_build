@@ -1,0 +1,21 @@
+{
+  "name_str": "box_l4_he520",
+  "model_str": "vertex_gray_box.glb",
+  "params_dict": {
+    "wt_engine": "unified",
+    "target_longest_edge_mm": 4.0,
+    "wt_preset": "he520"
+  },
+  "slice_count_int": 109,
+  "inked_voxel_int": 93870,
+  "bmp_md5_str": "d3b79cc19e97c5f82e445f5e63d8806f",
+  "final_width_int": 39,
+  "band_thickness_mm_float": 1.2,
+  "grid_list": [
+    39,
+    67,
+    109
+  ],
+  "model_sha256": "984a5e4de13d4bd3a99057690d9c668f440f107bf252f80e57aeaf4eccbe3f26",
+  "algorithm_fingerprint": "92a6c32c42740e5fbda75b905b626b1abd02c81c3b71b6249576f6d223348834"
+}

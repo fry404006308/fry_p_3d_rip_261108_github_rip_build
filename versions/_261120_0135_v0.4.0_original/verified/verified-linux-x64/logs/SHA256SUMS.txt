@@ -1,0 +1,1 @@
+724b3033cee6cad5c6b8916d67e59511451ed3f9d48c793390531302ebdcd0b8  fry-halftone-0.4.0-linux-x64.tar.zst
