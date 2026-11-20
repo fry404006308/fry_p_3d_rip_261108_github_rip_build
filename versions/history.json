@@ -41,6 +41,17 @@
     "linux-arm64": true,
     "linux-x64": true
    }
+  },
+  {
+   "dir_str": "_261120_0135_v0.4.0_original",
+   "version_str": "0.4.0",
+   "algorithm_fingerprint_str": "92a6c32c42740e5fbda75b905b626b1abd02c81c3b71b6249576f6d223348834",
+   "inputs_sha256_dict": {
+    "kit": "79c0e61f924317990a997a30cafe53cbae500dcc62dc14b06d12a881dd0a13e3",
+    "win32-x64": "5d22828da6c8dcfd819c8ee2448e35e1c0c5c70fb669b35f34ec657b1cf2cd0b"
+   },
+   "status_str": "staged",
+   "staged_at_str": "2026-11-20T01:35:02-0800"
   }
  ]
 }
